@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/dist/css/style.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/02dbe1fffb.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+<body>
+
+  <div class="container">
+      <div class="left-section">
+        <form class="form">
+          <div class="header">
+            <h1>Mortgage calculator</h1>
+            <button type="reset"><h6>Clear All</h6></button>
+          </div>
+
+          <h6>Mortgage Amount</h6>
+          <div class="text-input-1">
+            <div class="input-text-wrapper">
+              <span class="highlight"><h4>£</h4></span><input type="text" name="mortgageInput" id="mortgageInput">
+            </div>
+            <div class="errMsg1"></div>
+          </div>
+
+          <div class="container-input">
+            <div class="text-input-2">
+              <h6>Mortgage Term</h6>
+              <div class="input-text-wrapper">
+                <input name="termInput" maxlength="3" type="text" id=""><span class="highlight"><h4>years</h4></span>
+              </div>
+              <div class="errMsg2"></div>
+            </div>
+
+            <div class="text-input-3">
+              <h6>Interest Rate</h6>
+              <div class="input-text-wrapper">
+              <input name="interestInput" maxlength="2" type="text" id=""> <span class="highlight"><h4>%</h4></span>
+              </div>
+              <div class="errMsg3"></div>
+            </div>
+          </div>
+
+          <div class="container-radio">
+            <h6>Mortgage Type</h6>
+            <label class="radio">
+              <div class="layer"></div>
+              <input id="repayment" type="radio" name="none"><h4>Repayment</h4></input>
+              <span></span>          
+            </label>
+            <label class="radio">
+              <div class="layer"></div>
+              <input value="interestOnly" type="radio" name="none"><h4>Interest only</h4></input>
+              <span></span>
+            </label>
+            <div class="errMsg4"></div>
+          </div>
+
+          <div class="submit-wrapper">
+            <button class="sub" type="submit"><i class="fa-solid fa-calculator"></i><h4>Calculate Repayments</h4></button>
+          </div>
+      </form>  
+    </div>
+
+    <div class="right-section">
+      
+      <div class="no-results-wrapper">
+        <img src="/assets/images/illustration-empty.svg" alt="">
+        <h1>Results appear here</h1>
+        <h6>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</h6>
+      </div>
+
+      <div class="results-wrapper">
+        <h1>Your results</h1>
+        <h6>Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</h6>
+        <div class="repayments">
+          <h6>Your monthly repayments</h6>
+          <h1 id="amount"></h1>
+          <h6>Total you'll repay over the term</h6>
+          <h1 id="totalAmount"></h1>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+ 
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+  <script type="module" src="/dist/js/app.js"></script>
+  
+</body>
+</html>
