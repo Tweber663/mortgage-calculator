@@ -51,10 +51,8 @@ class Setup {
         e.preventDefault();
         this.clearErrors();
         const target = e.target;
-        console.log(target);
         const inputElement_1 = target.mortgageInput.value;
         this.amount = Number(inputElement_1);
-        console.log(target.mortgageInput.value);
         const inputElement_2 = target.termInput.value;
         this.term = Number(inputElement_2);
         const inputElement_3 = target.interestInput.value;
@@ -67,7 +65,7 @@ class Setup {
             this.type = "intrest";
         this.verified = this.verify();
         if (this.verified) {
-            console.log('submited:)');
+            console.log('submitted:)');
             new Calculator(this.dom.container);
         }
         else {

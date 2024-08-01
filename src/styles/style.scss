@@ -319,9 +319,18 @@ button[type="submit"] i {
 }
 
 
-//Mobile media 
+//tablet
+@media(min-width: 576px) and (max-width:960px) {
+  .container {
+    width: 70vw;
+    height: 90vh;
+    flex-direction: column;
+    border-radius: 25px;
+  }
 
+}
 
+//Mobile
 @media (max-width: 576px) {
   .container {
     width: 100vw;
@@ -398,7 +407,6 @@ button[type="submit"] i {
   .amount {
     font-size: 30px;
   }
-
 }
 
 

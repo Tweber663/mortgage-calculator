@@ -74,11 +74,9 @@ class Setup {
     
         this.clearErrors(); 
         const target = e.target as HTMLFormElement;
-    
-        console.log(target)
+
         const inputElement_1 = target.mortgageInput.value as HTMLInputElement;
         this.amount = Number(inputElement_1);
-        console.log(target.mortgageInput.value);
         
         const inputElement_2 = target.termInput.value as HTMLInputElement;
         this.term = Number(inputElement_2);
@@ -94,7 +92,7 @@ class Setup {
         this.verified = this.verify()
 
         if (this.verified) {
-            console.log('submited:)');
+            console.log('submitted:)');
             new Calculator(this.dom.container)
         } else {
             console.log('Not submitted:(')

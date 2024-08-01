@@ -78,7 +78,7 @@ class Calculator extends Setup implements CalcuInterface  {
             this.getElements(container)
             this.dom.resultsWrapper.style.display = "none";
             this.dom.noResulstWrapper.style.display = "block";
-            this.dom.activeLayers[0].classList.remove('active');
+            if (this.dom.activeLayers[0]) this.dom.activeLayers[0].classList.remove('active');
             this.amount = 0;
             this.term = 0; 
             this.intrestRate = 0;

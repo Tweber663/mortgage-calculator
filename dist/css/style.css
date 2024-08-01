@@ -293,6 +293,14 @@ button[type=submit] i {
   font-size: 45px;
 }
 
+@media (min-width: 576px) and (max-width: 960px) {
+  .container {
+    width: 70vw;
+    height: 90vh;
+    flex-direction: column;
+    border-radius: 25px;
+  }
+}
 @media (max-width: 576px) {
   .container {
     width: 100vw;
